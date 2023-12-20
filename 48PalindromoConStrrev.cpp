@@ -42,3 +42,24 @@ regresar:
 }
 */
 // TUTORIAL
+
+#include <iostream>
+#include <string.h>
+int main()
+{
+    char texto[40], textoRev[40];
+regresar:
+    std::cout << "Humano escribe un palindromo: ";
+    std::cin >> texto;
+    strcpy(textoRev, texto);
+    strrev(textoRev);
+    if (strcmp(texto, textoRev) != 0)
+    {
+        std::cout << "Eso no es (" << texto << " " << textoRev << ") un palindromo!!\n";
+        goto regresar;
+    }
+    else
+    {
+        std::cout << "Eso SI es un palindronmo!";
+    }
+}
