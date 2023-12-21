@@ -1,3 +1,5 @@
+// TUTORIAL
+
 #include <iostream>
 
 int main()
@@ -9,6 +11,8 @@ int main()
         std::cout << (i + 1) << " ";
         std::cin >> numeros[i];
     }
+
+    // INSERTION SORT
 
     for (int i = 0; i < 5; i++)
     {
@@ -23,6 +27,18 @@ int main()
         aux = numeros[i];
         numeros[i] = numeros[min];
         numeros[min] = aux;
+    }
+
+    std::cout << "Aquie esta tus numeros de forma ascendente: \n";
+    for (int i = 0; i < 5; i++)
+    {
+        std::cout << numeros[i] << "\n";
+    }
+
+    std::cout << "Aqui esta tus numeros de forma descendente: \n";
+    for (int i = 4; i >= 0; i--)
+    {
+        std::cout << numeros[i] << "\n";
     }
 
     return 0;
